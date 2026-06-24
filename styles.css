@@ -51,6 +51,17 @@ button {
   outline: 3px solid var(--clay);
   outline-offset: 4px;
 }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
 ::selection {
   background: var(--clay);
   color: white;
@@ -286,22 +297,28 @@ html[dir="rtl"] .nav-group.is-open .submenu {
   object-fit: cover;
 }
 .hero-scrim {
-  background: linear-gradient(
-    90deg,
-    rgba(25, 40, 32, 0.05) 25%,
-    rgba(25, 40, 32, 0.66) 100%
-  );
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(
+      90deg,
+      rgba(25, 40, 32, 0.05) 25%,
+      rgba(25, 40, 32, 0.66) 100%
+    );
 }
 html[dir="ltr"] .hero-scrim {
-  background: linear-gradient(
-    270deg,
-    rgba(25, 40, 32, 0.05) 25%,
-    rgba(25, 40, 32, 0.66) 100%
-  );
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    linear-gradient(
+      270deg,
+      rgba(25, 40, 32, 0.05) 25%,
+      rgba(25, 40, 32, 0.66) 100%
+    );
 }
 .hero-inner {
   position: relative;
   z-index: 1;
+  margin-top: auto;
+  margin-bottom: auto;
   padding-block: calc(var(--header-height) + 5rem) clamp(4rem, 10vw, 8rem);
 }
 .hero-card {
@@ -548,49 +565,77 @@ html[dir="ltr"] .hero-scrim {
 }
 
 .contact {
-  background: var(--clay);
-  color: white;
+  background-color: var(--cream);
+  background-image:
+    radial-gradient(
+      circle at 18% 24%,
+      rgba(188, 118, 88, 0.09) 0 1px,
+      transparent 1.5px
+    ),
+    radial-gradient(
+      circle at 72% 68%,
+      rgba(39, 53, 45, 0.07) 0 1px,
+      transparent 1.5px
+    );
+  background-size:
+    24px 24px,
+    31px 31px;
+  color: #65151b;
 }
 .contact-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   gap: clamp(3rem, 8vw, 8rem);
+  align-items: center;
 }
 .contact .eyebrow {
-  color: #ffe0d1;
+  color: var(--clay);
 }
 .contact-copy .lead {
-  color: #ffede5;
+  color: var(--ink-soft);
 }
 .location {
   display: flex;
   gap: 0.5rem;
   align-items: center;
+  color: var(--ink-soft);
 }
 .contact-links {
-  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  display: grid;
+  gap: clamp(0.7rem, 2vw, 1.2rem);
+  align-content: center;
 }
 .contact-links a {
-  display: flex;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(2.25rem, 4vw, 3.2rem);
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 1.35rem 0.3rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  gap: clamp(0.8rem, 2vw, 1.4rem);
+  padding: 0.35rem 0.3rem;
+  color: #65151b;
+  direction: ltr;
   text-decoration: none;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
 }
 .contact-links a:hover {
-  background: rgba(255, 255, 255, 0.08);
+  text-decoration: underline;
 }
-.contact-links span:first-child {
-  display: grid;
-}
-.contact-links small {
-  color: #ffe0d1;
-}
+
 .contact-links strong {
-  font-size: 1.1rem;
+  justify-self: end;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.1;
+  text-align: end;
   overflow-wrap: anywhere;
+}
+.contact-icon {
+  width: 100%;
+  height: auto;
+  max-height: 1.6rem;
+  object-fit: contain;
+  opacity: 0.72;
 }
 
 .site-footer {
@@ -854,18 +899,14 @@ body.highlight-links a {
     font-size: clamp(2.8rem, 14vw, 4.6rem);
   }
   .hero-scrim {
-    background: linear-gradient(
-      0deg,
-      rgba(25, 40, 32, 0.78),
-      rgba(25, 40, 32, 0.05) 75%
-    );
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      linear-gradient(0deg, rgba(25, 40, 32, 0.78), rgba(25, 40, 32, 0.05) 75%);
   }
   html[dir="ltr"] .hero-scrim {
-    background: linear-gradient(
-      0deg,
-      rgba(25, 40, 32, 0.78),
-      rgba(25, 40, 32, 0.05) 75%
-    );
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+      linear-gradient(0deg, rgba(25, 40, 32, 0.78), rgba(25, 40, 32, 0.05) 75%);
   }
   .scroll-cue {
     display: none;
