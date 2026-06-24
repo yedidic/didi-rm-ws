@@ -273,6 +273,7 @@ html[dir="rtl"] .nav-group.is-open .submenu {
   padding: 0.5rem 0.75rem;
   background: transparent;
   cursor: pointer;
+  text-decoration: none;
 }
 .language-switch:hover {
   border-color: var(--ink);
@@ -873,7 +874,7 @@ body.highlight-links a {
     padding: 0.75rem 1.2rem;
     font-size: 1rem;
   }
-  .primary-nav > a,
+  .primary-nav > a:not(.language-switch-mobile),
   .nav-submenu-toggle {
     width: 100%;
     padding: 1rem 0;

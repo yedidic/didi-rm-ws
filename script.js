@@ -1,10 +1,9 @@
 (() => {
   "use strict";
 
-  const DEFAULT_LANGUAGE = "he";
+  const DEFAULT_LANGUAGE = document.documentElement.lang === "en" ? "en" : "he";
   const SITE_URL = "https://didi.yoga-house.co/";
   const STORAGE = {
-    language: "didi-language",
     accessibility: "didi-accessibility"
   };
 
@@ -52,7 +51,7 @@
 
   async function fetchLanguage(requestedLanguage) {
     try {
-      const response = await fetch(`locales/${requestedLanguage}.json`, { cache: "no-cache" });
+      const response = await fetch(`/locales/${requestedLanguage}.json`, { cache: "no-cache" });
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
       return { data: await response.json(), resolvedLanguage: requestedLanguage };
     } catch (error) {
@@ -76,7 +75,6 @@
     updateContactLinks();
     updateStructuredData();
     syncMenuA11y();
-    writeJson(STORAGE.language, language);
     if (announce) announceMessage(getValue("language.changed"));
   }
 
@@ -131,12 +129,13 @@
 
   function updateStructuredData() {
     const phone = getValue("contact.links.phone")?.replace(/^tel:/, "");
+    const pageUrl = document.querySelector("link[rel='canonical']")?.href || SITE_URL;
     const schema = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "@id": `${SITE_URL}#business`,
       name: getValue("brand.name"),
-      url: SITE_URL,
+      url: pageUrl,
       description: getValue("meta.description"),
       image: new URL("images/hero-room.jpg", SITE_URL).href,
       logo: new URL("images/rm-logo.svg", SITE_URL).href,
@@ -174,8 +173,6 @@
   }
 
   function determineInitialLanguage() {
-    const stored = readJson(STORAGE.language);
-    if (["he", "en"].includes(stored)) return stored;
     return DEFAULT_LANGUAGE;
   }
 
@@ -301,11 +298,6 @@
       setupReveals();
       setupAccessibility();
       setupGlobalKeyboard();
-      document.querySelectorAll("[data-language-switch]").forEach((button) => button.addEventListener("click", () => {
-        setLanguage(language === "he" ? "en" : "he", true)
-          .then(closeMenu)
-          .catch((error) => console.error("Language switch failed.", error));
-      }));
     } catch (error) {
       console.error("The website could not be initialized.", error);
       document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));

@@ -20,6 +20,8 @@ Then open `http://localhost:8000`.
 
 All visible copy and data live in `locales/he.json` and `locales/en.json`. Keep their key structures identical.
 
+Hebrew is served at `/` and English at `/en/`. Keep both HTML shells aligned when changing page structure or SEO metadata.
+
 ## Deployment
 
 Upload the repository contents to any static host (for example GitHub Pages, Netlify, Cloudflare Pages, or an ordinary web server). No build command or backend is required.
