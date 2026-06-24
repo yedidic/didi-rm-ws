@@ -266,9 +266,11 @@
       setupReveals();
       setupAccessibility();
       setupGlobalKeyboard();
-      document.querySelector("[data-language-switch]").addEventListener("click", () => {
-        setLanguage(language === "he" ? "en" : "he", true).catch((error) => console.error("Language switch failed.", error));
-      });
+      document.querySelectorAll("[data-language-switch]").forEach((button) => button.addEventListener("click", () => {
+        setLanguage(language === "he" ? "en" : "he", true)
+          .then(closeMenu)
+          .catch((error) => console.error("Language switch failed.", error));
+      }));
     } catch (error) {
       console.error("The website could not be initialized.", error);
       document.querySelectorAll(".reveal").forEach((element) => element.classList.add("is-visible"));
