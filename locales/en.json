@@ -1,12 +1,12 @@
 {
   "meta": {
-    "title": "Didi Cohen | Rosen Method & Kundalini Yoga",
-    "description": "Rosen Method Bodywork sessions and Kundalini Yoga with Didi Cohen in Rehavia, Jerusalem.",
-    "ogDescription": "A quiet space for body awareness, movement and meeting yourself."
+    "title": "Didi Cohen | Rosen Method Bodywork in Jerusalem",
+    "description": "Rosen Method Bodywork sessions with Didi Cohen in Rehavia, Jerusalem.",
+    "ogDescription": "A quiet space for attentive touch, body awareness and meeting yourself."
   },
   "brand": {
     "name": "Didi Cohen",
-    "role": "Rosen Method & Kundalini Yoga",
+    "role": "Rosen Method Bodywork",
     "aria": "Didi Cohen — return to the top"
   },
   "language": {
@@ -28,7 +28,7 @@
   "hero": {
     "eyebrow": "Connection · Listening · Touch",
     "title": "A space to listen to ourselves through the body",
-    "intro": "Rosen Method Bodywork and Kundalini Yoga classes in a quiet, attentive space in Rehavia, Jerusalem.",
+    "intro": "Rosen Method Bodywork in a quiet, attentive space in Rehavia, Jerusalem.",
     "primaryCta": "Let’s talk",
     "secondaryCta": "Explore the work",
     "scrollAria": "Continue to the introduction"
@@ -36,23 +36,24 @@
   "intro": {
     "eyebrow": "An invitation to pause",
     "title": "When there is room to soften, something new can become possible.",
-    "body": "Through gentle touch, conversation, movement and breath, we can meet the body with curiosity—not as something to fix, but as a living part of who we are."
+    "body": "Through gentle touch and conversation, we can meet the body with curiosity—not as something to fix, but as a living part of who we are."
   },
   "about": {
     "eyebrow": "About Didi",
     "title": "Presence, curiosity and a human meeting",
-    "lead": "I’m Didi Cohen, a Rosen Method Bodywork intern, Kundalini Yoga teacher and trainer, based in Rehavia, Jerusalem.",
-    "body1": "I began studying Rosen Method in 2019 and completed the training program in 2023. My background also includes a BSW in Social Work from Bar-Ilan University and work as a software engineer—different worlds that each taught me something about listening, complexity and change.",
-    "body2": "I’m married to Maayan and father to Pelly Fani. Together, we care for Beit Shel Yoga (House of Yoga), a studio and community in Jerusalem. I teach a weekly Kundalini Yoga group and offer private classes alongside individual Rosen sessions.",
+    "lead": "I’m Didi Cohen, a Rosen Method Bodywork intern based in Rehavia, Jerusalem.",
+    "body1": "I began studying Rosen Method in 2019, completed the training program and began my internship in 2023. I hold a BSW in Social Work from Bar-Ilan University and also work as a software developer—different worlds that have each taught me something about listening, complexity and change.",
+    "body2": "I’m married to Maayan and father to Pelly Fani. Alongside individual Rosen Method sessions, I am a Kundalini Yoga teacher and teacher trainer. Together with Maayan, I care for Beit Shel Yoga, a Jerusalem studio and community where I teach a weekly group and offer private classes.",
     "credentialsAria": "Training and professional background",
     "credential1": "Rosen Method Bodywork studies, 2019–2023 · currently an intern",
     "credential2": "BSW, Bar-Ilan University",
-    "credential3": "Kundalini Yoga teacher and trainer"
+    "credential3": "Software developer",
+    "credential4": "Kundalini Yoga teacher and teacher trainer"
   },
   "services": {
     "eyebrow": "Working together",
-    "title": "Two ways of coming closer to yourself",
-    "intro": "Each path has its own language and pace. We can begin with what feels right for you now.",
+    "title": "Listening to what the body already knows",
+    "intro": "The session offers time and space to listen to the body at your own pace.",
     "cta": "Schedule a conversation",
     "rosen": {
       "title": "Rosen Method Bodywork",
@@ -69,23 +70,70 @@
       "note": "Weekly group class · Private classes by arrangement · Jerusalem"
     }
   },
+  "kundaliniPage": {
+    "meta": {
+      "title": "Didi Cohen | Kundalini Yoga in Jerusalem",
+      "description": "Group and private Kundalini Yoga classes with Didi Cohen in Jerusalem.",
+      "ogDescription": "Kundalini Yoga practice combining movement, breath, attention and rest."
+    },
+    "brandRole": "Kundalini Yoga",
+    "hero": {
+      "eyebrow": "Movement · Breath · Attention",
+      "title": "A space to practice, breathe and listen",
+      "intro": "Group and private Kundalini Yoga classes in Jerusalem.",
+      "secondaryCta": "Explore the practice"
+    },
+    "intro": {
+      "eyebrow": "An invitation to practice",
+      "title": "Move at your own pace and meet what is present now.",
+      "body": "The practice combines movement, breath, attention and rest. No previous experience or particular level of flexibility is needed."
+    },
+    "about": {
+      "lead": "I’m Didi Cohen, a Kundalini Yoga teacher and teacher trainer based in Jerusalem.",
+      "body1": "I teach a weekly group at Beit Shel Yoga and offer private classes shaped around your pace and needs.",
+      "body2": "Together with Maayan, I care for Beit Shel Yoga—a Jerusalem studio and community offering space for practice and connection. My background also includes a BSW from Bar-Ilan University, studies in Rosen Method Bodywork and work as a software developer; these fields deepen the way I listen to the body, the person, complexity and each practitioner’s individual pace.",
+      "credential1": "Kundalini Yoga teacher and teacher trainer",
+      "credential2": "Weekly group practice at Beit Shel Yoga",
+      "credential3": "Private classes tailored to you",
+      "credential4": "Rosen Method Bodywork studies, 2019–2023 · currently an intern",
+      "credential5": "BSW, Bar-Ilan University",
+      "credential6": "Software developer"
+    },
+    "servicesTitle": "Group and private practice",
+    "servicesIntro": "Join the weekly group or arrange a private class.",
+    "footerStatus": "Kundalini Yoga teacher and teacher trainer"
+  },
   "testimonials": {
     "eyebrow": "Kind words",
-    "title": "Experiences from the studio and practice",
-    "placeholderNote": "",
-    "card1": {
-      "quote": "Client testimonial placeholder. Replace this with an approved quote before publishing.",
-      "author": "Placeholder — client name or initials"
+    "rosen": {
+      "title": "Experiences from the clinic",
+      "placeholderNote": "",
+      "card1": {
+        "quote": "Rosen Method client testimonial placeholder. Replace this with an approved quote before publishing.",
+        "author": "Placeholder — client name or initials"
+      },
+      "card2": {
+        "quote": "Clinic testimonial placeholder. Do not publish without the client’s explicit permission.",
+        "author": "Placeholder — client name or initials"
+      }
     },
-    "card2": {
-      "quote": "Client testimonial placeholder. Do not publish without the client’s explicit permission.",
-      "author": "Placeholder — client name or initials"
+    "kundalini": {
+      "title": "Experiences from the studio",
+      "placeholderNote": "",
+      "card1": {
+        "quote": "Kundalini Yoga student testimonial placeholder. Replace this with an approved quote before publishing.",
+        "author": "Placeholder — student name or initials"
+      },
+      "card2": {
+        "quote": "Studio testimonial placeholder. Do not publish without the student’s explicit permission.",
+        "author": "Placeholder — student name or initials"
+      }
     }
   },
   "contact": {
     "eyebrow": "Contact",
     "title": "Maybe this is a good place to begin",
-    "body": "You’re welcome to write or call with a question, to hear more, or to arrange an introductory conversation. No commitment and no need to know exactly what you’re looking for.",
+    "body": "You’re welcome to write or call with a question, to hear more, or to arrange an introductory conversation.",
     "location": "Rehavia, Jerusalem",
     "whatsappLabel": "WhatsApp",
     "whatsappValue": "+972-50-8289-317",
@@ -109,7 +157,7 @@
     "yogaAlt": "A warm Jerusalem yoga studio with mats arranged for a small group"
   },
   "footer": {
-    "status": "Rosen Method Bodywork intern · Kundalini Yoga teacher",
+    "status": "Rosen Method Bodywork intern",
     "backTop": "Back to top",
     "copyright": "© 2026 Didi Cohen. All rights reserved.",
     "location": "Rehavia, Jerusalem",
@@ -131,7 +179,7 @@
     "resetDone": "Accessibility preferences reset"
   },
   "schema": {
-    "serviceType": "Rosen Method Bodywork and Kundalini Yoga classes",
+    "serviceType": "Rosen Method Bodywork",
     "areaServed": "Jerusalem"
   }
 }

@@ -13,6 +13,7 @@
 
   const root = document.documentElement;
   const body = document.body;
+  const pageType = body.dataset.page === "kundalini" ? "kundalini" : "rosen";
   const liveRegion = document.querySelector(".live-region");
   const menuButton = document.querySelector(".menu-toggle");
   const navigation = document.querySelector(".primary-nav");
@@ -95,18 +96,19 @@
   }
 
   function updateMetadata() {
-    document.title = getValue("meta.title");
-    setMeta("meta[name='description']", getValue("meta.description"));
+    const metaPath = pageType === "kundalini" ? "kundaliniPage.meta" : "meta";
+    document.title = getValue(`${metaPath}.title`);
+    setMeta("meta[name='description']", getValue(`${metaPath}.description`));
     setMeta("meta[name='author']", getValue("brand.name"));
     setMeta("meta[property='og:site_name']", getValue("brand.name"));
     setMeta("meta[property='og:locale']", language === "he" ? "he_IL" : "en_US");
     setMeta("meta[property='og:locale:alternate']", language === "he" ? "en_US" : "he_IL");
-    setMeta("meta[property='og:title']", getValue("meta.title"));
-    setMeta("meta[property='og:description']", getValue("meta.ogDescription"));
-    setMeta("meta[property='og:image:alt']", getValue("images.heroAlt"));
-    setMeta("meta[name='twitter:title']", getValue("meta.title"));
-    setMeta("meta[name='twitter:description']", getValue("meta.ogDescription"));
-    setMeta("meta[name='twitter:image:alt']", getValue("images.heroAlt"));
+    setMeta("meta[property='og:title']", getValue(`${metaPath}.title`));
+    setMeta("meta[property='og:description']", getValue(`${metaPath}.ogDescription`));
+    setMeta("meta[property='og:image:alt']", getValue(pageType === "kundalini" ? "images.yogaAlt" : "images.heroAlt"));
+    setMeta("meta[name='twitter:title']", getValue(`${metaPath}.title`));
+    setMeta("meta[name='twitter:description']", getValue(`${metaPath}.ogDescription`));
+    setMeta("meta[name='twitter:image:alt']", getValue(pageType === "kundalini" ? "images.yogaAlt" : "images.heroAlt"));
   }
 
   function setMeta(selector, value) {
@@ -136,9 +138,9 @@
       "@id": `${SITE_URL}#business`,
       name: getValue("brand.name"),
       url: pageUrl,
-      description: getValue("meta.description"),
-      image: new URL("images/hero-room.jpg", SITE_URL).href,
-      logo: new URL("images/rm-logo.svg", SITE_URL).href,
+      description: getValue(pageType === "kundalini" ? "kundaliniPage.meta.description" : "meta.description"),
+      image: new URL(pageType === "kundalini" ? "images/yoga-studio.jpg" : "images/hero-room.jpg", SITE_URL).href,
+      logo: new URL(pageType === "kundalini" ? "images/yoga-logo.svg" : "images/rm-logo.svg", SITE_URL).href,
       telephone: phone,
       email: getValue("contact.emailValue"),
       areaServed: getValue("schema.areaServed"),
@@ -149,22 +151,14 @@
         addressCountry: "IL"
       },
       sameAs: [getValue("contact.links.instagram")],
-      serviceType: getValue("schema.serviceType"),
+      serviceType: getValue(pageType === "kundalini" ? "services.yoga.title" : "schema.serviceType"),
       makesOffer: [
         {
           "@type": "Offer",
           itemOffered: {
             "@type": "Service",
-            name: getValue("services.rosen.title"),
-            description: getValue("services.rosen.lead")
-          }
-        },
-        {
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: getValue("services.yoga.title"),
-            description: getValue("services.yoga.lead")
+            name: getValue(pageType === "kundalini" ? "services.yoga.title" : "services.rosen.title"),
+            description: getValue(pageType === "kundalini" ? "services.yoga.lead" : "services.rosen.lead")
           }
         }
       ]

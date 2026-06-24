@@ -20,7 +20,7 @@ Then open `http://localhost:8000`.
 
 All visible copy and data live in `locales/he.json` and `locales/en.json`. Keep their key structures identical.
 
-Hebrew is served at `/` and English at `/en/`. Keep both HTML shells aligned when changing page structure or SEO metadata.
+The Rosen Method pages are served at `/` and `/en/`. The Kundalini Yoga pages are served at `/kundalini.html` and `/en/kundalini.html`. Keep both language versions aligned when changing page structure or SEO metadata.
 
 After editing either locale file, render the crawlable fallback text into both HTML pages:
 

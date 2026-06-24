@@ -2,7 +2,9 @@ import { readFile, writeFile } from "node:fs/promises";
 
 const pages = [
   { html: "index.html", locale: "locales/he.json" },
-  { html: "en/index.html", locale: "locales/en.json" }
+  { html: "en/index.html", locale: "locales/en.json" },
+  { html: "kundalini.html", locale: "locales/he.json" },
+  { html: "en/kundalini.html", locale: "locales/en.json" }
 ];
 
 function getValue(data, path) {
