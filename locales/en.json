@@ -26,9 +26,9 @@
     "contact": "Contact"
   },
   "hero": {
-    "eyebrow": "Bodywork · Breath · Awareness",
-    "title": "A place to listen to what the body already knows",
-    "intro": "Rosen Method Bodywork and Kundalini Yoga in a quiet, attentive space in Rehavia, Jerusalem.",
+    "eyebrow": "Connection · Listening · Touch",
+    "title": "A space to listen to ourselves through the body",
+    "intro": "Rosen Method Bodywork and Kundalini Yoga classes in a quiet, attentive space in Rehavia, Jerusalem.",
     "primaryCta": "Let’s talk",
     "secondaryCta": "Explore the work",
     "scrollAria": "Continue to the introduction"
@@ -53,11 +53,11 @@
     "eyebrow": "Working together",
     "title": "Two ways of coming closer to yourself",
     "intro": "Each path has its own language and pace. We can begin with what feels right for you now.",
-    "cta": "Ask about a session",
+    "cta": "Schedule a conversation",
     "rosen": {
       "title": "Rosen Method Bodywork",
-      "lead": "A gentle practice that combines attentive touch and conversation to invite awareness of habitual muscle tension and breathing patterns.",
-      "body": "A session takes place on a treatment table. Touch is responsive rather than forceful. There is no goal you have to achieve; sensations, breath, words or quiet can each be part of the meeting. Rosen Method is a complementary wellbeing practice and is not a replacement for medical or mental-health care.",
+      "lead": "A gentle practice that combines attentive touch and conversation to invite awareness of chronic muscular tension and patterns in our lives.",
+      "body": "A session takes place on a massage table. Touch responds, listens and makes space. There is no goal you have to achieve; sensations, breath, words or quiet can each be part of the meeting. Rosen Method is a complementary wellbeing practice and is not a replacement for medical or mental-health care.",
       "noteTitle": "Individual sessions",
       "note": "In Rehavia, Jerusalem · By appointment · Offered as part of my supervised internship"
     },
@@ -71,8 +71,8 @@
   },
   "testimonials": {
     "eyebrow": "Kind words",
-    "title": "Experiences from the room",
-    "placeholderNote": "This section is ready for real, approved client testimonials. The text below is intentionally marked as placeholder content.",
+    "title": "Experiences from the studio and practice",
+    "placeholderNote": "",
     "card1": {
       "quote": "Client testimonial placeholder. Replace this with an approved quote before publishing.",
       "author": "Placeholder — client name or initials"
@@ -131,7 +131,7 @@
     "resetDone": "Accessibility preferences reset"
   },
   "schema": {
-    "serviceType": "Rosen Method Bodywork and Kundalini Yoga",
+    "serviceType": "Rosen Method Bodywork and Kundalini Yoga classes",
     "areaServed": "Jerusalem"
   }
 }
