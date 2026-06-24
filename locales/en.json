@@ -112,8 +112,8 @@
     "status": "Rosen Method Bodywork intern · Kundalini Yoga teacher",
     "backTop": "Back to top",
     "copyright": "© 2026 Didi Cohen. All rights reserved.",
-    "privacySettings": "Privacy settings",
-    "location": "Rehavia, Jerusalem"
+    "location": "Rehavia, Jerusalem",
+    "storageNotice": "Language and accessibility preferences are stored only on this device"
   },
   "a11y": {
     "skip": "Skip to main content",
@@ -129,23 +129,6 @@
     "note": "These tools complement the site’s built-in accessibility and do not guarantee compliance with every individual need.",
     "updated": "Accessibility preference updated",
     "resetDone": "Accessibility preferences reset"
-  },
-  "cookie": {
-    "aria": "Privacy preferences",
-    "title": "Your preferences, without tracking",
-    "body": "This site uses no advertising or analytics cookies. With your permission, local storage remembers your language and accessibility choices on this device.",
-    "accept": "Allow preferences",
-    "reject": "Essential only",
-    "preferences": "Choose settings",
-    "dialogTitle": "Privacy settings",
-    "dialogBody": "Choose whether this browser may remember convenience preferences. You can change this choice at any time from the footer.",
-    "essentialTitle": "Essential storage",
-    "essentialBody": "Remembers this privacy choice. Always active.",
-    "functionalTitle": "Functional preferences",
-    "functionalBody": "Remembers language and accessibility settings. No tracking.",
-    "save": "Save settings",
-    "close": "Close privacy settings",
-    "saved": "Privacy preferences saved"
   },
   "schema": {
     "serviceType": "Rosen Method Bodywork and Kundalini Yoga",

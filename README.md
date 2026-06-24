@@ -19,7 +19,7 @@ Then open `http://localhost:8000`.
 - Replace the placeholder phone, WhatsApp, email, Instagram values and links in both locale files.
 - Replace the two explicitly marked testimonial placeholders with approved client quotes, or remove the section.
 - Replace the canonical URL and confirm Open Graph metadata in `index.html`.
-- Have the final privacy wording and accessibility behavior reviewed for the actual services and deployment environment.
+- Review the accessibility behavior and the short local-storage notice for the final deployment environment.
 
 All visible copy and data live in `locales/he.json` and `locales/en.json`. Keep their key structures identical.
 
