@@ -3,14 +3,12 @@
 
   const DEFAULT_LANGUAGE = "he";
   const STORAGE = {
-    consent: "didi-consent",
     language: "didi-language",
     accessibility: "didi-accessibility"
   };
 
   let language = DEFAULT_LANGUAGE;
   let messages = {};
-  let consent = readJson(STORAGE.consent);
   let accessibility = defaultAccessibility();
 
   const root = document.documentElement;
@@ -20,9 +18,6 @@
   const navigation = document.querySelector(".primary-nav");
   const submenuButton = document.querySelector(".nav-submenu-toggle");
   const navGroup = document.querySelector(".nav-group");
-  const cookieBanner = document.querySelector("[data-cookie-banner]");
-  const preferencesDialog = document.querySelector("[data-preferences-dialog]");
-  const functionalConsent = document.querySelector("[data-functional-consent]");
   const a11yTrigger = document.querySelector(".a11y-trigger");
   const a11yPanel = document.querySelector(".a11y-panel");
 
@@ -43,14 +38,6 @@
     } catch (error) {
       console.warn(`Could not save ${key} to local storage.`, error);
       return false;
-    }
-  }
-
-  function removeStored(key) {
-    try {
-      localStorage.removeItem(key);
-    } catch (error) {
-      console.warn(`Could not remove ${key} from local storage.`, error);
     }
   }
 
@@ -88,7 +75,7 @@
     updateContactLinks();
     updateStructuredData();
     syncMenuA11y();
-    if (consent?.functional) writeJson(STORAGE.language, language);
+    writeJson(STORAGE.language, language);
     if (announce) announceMessage(getValue("language.changed"));
   }
 
@@ -152,9 +139,9 @@
   }
 
   function determineInitialLanguage() {
-    const stored = consent?.functional ? readJson(STORAGE.language) : null;
+    const stored = readJson(STORAGE.language);
     if (["he", "en"].includes(stored)) return stored;
-    return navigator.language?.toLowerCase().startsWith("en") ? "en" : DEFAULT_LANGUAGE;
+    return DEFAULT_LANGUAGE;
   }
 
   function syncMenuA11y() {
@@ -211,37 +198,8 @@
     document.querySelectorAll(".reveal").forEach((element) => observer.observe(element));
   }
 
-  function saveConsent(functional) {
-    consent = { functional, updatedAt: new Date().toISOString() };
-    writeJson(STORAGE.consent, consent);
-    cookieBanner.hidden = true;
-    if (functional) {
-      writeJson(STORAGE.language, language);
-      writeJson(STORAGE.accessibility, accessibility);
-    } else {
-      removeStored(STORAGE.language);
-      removeStored(STORAGE.accessibility);
-    }
-    announceMessage(getValue("cookie.saved"));
-  }
-
-  function openPreferences() {
-    functionalConsent.checked = Boolean(consent?.functional);
-    if (typeof preferencesDialog.showModal === "function") preferencesDialog.showModal();
-    else preferencesDialog.setAttribute("open", "");
-  }
-
-  function setupConsent() {
-    cookieBanner.hidden = Boolean(consent);
-    document.querySelectorAll("[data-cookie-settings]").forEach((button) => button.addEventListener("click", openPreferences));
-    document.querySelector("[data-consent='accept']").addEventListener("click", () => saveConsent(true));
-    document.querySelector("[data-consent='reject']").addEventListener("click", () => saveConsent(false));
-    document.querySelector("[data-consent='preferences']").addEventListener("click", openPreferences);
-    document.querySelector("[data-consent='save']").addEventListener("click", () => saveConsent(functionalConsent.checked));
-  }
-
   function loadAccessibility() {
-    const stored = consent?.functional ? readJson(STORAGE.accessibility) : null;
+    const stored = readJson(STORAGE.accessibility);
     accessibility = { ...defaultAccessibility(), ...(stored || {}) };
     applyAccessibility();
   }
@@ -264,7 +222,7 @@
     if (action === "motion") accessibility.motion = !accessibility.motion;
     if (action === "reset") accessibility = defaultAccessibility();
     applyAccessibility();
-    if (consent?.functional) writeJson(STORAGE.accessibility, accessibility);
+    writeJson(STORAGE.accessibility, accessibility);
     announceMessage(getValue(action === "reset" ? "a11y.resetDone" : "a11y.updated"));
   }
 
@@ -297,7 +255,6 @@
       if (event.key !== "Escape") return;
       closeMenu();
       closeAccessibility();
-      if (preferencesDialog.open) preferencesDialog.close();
     });
   }
 
@@ -307,7 +264,6 @@
       loadAccessibility();
       setupNavigation();
       setupReveals();
-      setupConsent();
       setupAccessibility();
       setupGlobalKeyboard();
       document.querySelector("[data-language-switch]").addEventListener("click", () => {

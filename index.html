@@ -202,9 +202,9 @@
       <div class="shell footer-meta">
         <span data-i18n="footer.copyright"></span>
         <div>
-          <button type="button" data-cookie-settings data-i18n="footer.privacySettings"></button>
-          <span aria-hidden="true">·</span>
           <span data-i18n="footer.location"></span>
+          <span aria-hidden="true">·</span>
+          <span data-i18n="footer.storageNotice"></span>
         </div>
       </div>
     </footer>
@@ -224,25 +224,6 @@
       </div>
       <p class="panel-note" data-i18n="a11y.note"></p>
     </aside>
-
-    <section class="cookie-banner" data-cookie-banner hidden aria-label="" data-i18n-aria="cookie.aria">
-      <div><strong data-i18n="cookie.title"></strong><p data-i18n="cookie.body"></p></div>
-      <div class="cookie-actions">
-        <button class="button button-primary" type="button" data-consent="accept" data-i18n="cookie.accept"></button>
-        <button class="button button-outline" type="button" data-consent="reject" data-i18n="cookie.reject"></button>
-        <button class="text-button" type="button" data-consent="preferences" data-i18n="cookie.preferences"></button>
-      </div>
-    </section>
-
-    <dialog class="preferences-dialog" data-preferences-dialog aria-labelledby="preferences-title">
-      <form method="dialog">
-        <div class="panel-header"><h2 id="preferences-title" data-i18n="cookie.dialogTitle"></h2><button class="panel-close" value="cancel" data-i18n-aria="cookie.close">×</button></div>
-        <p data-i18n="cookie.dialogBody"></p>
-        <label class="preference-row"><span><strong data-i18n="cookie.essentialTitle"></strong><small data-i18n="cookie.essentialBody"></small></span><input type="checkbox" checked disabled></label>
-        <label class="preference-row"><span><strong data-i18n="cookie.functionalTitle"></strong><small data-i18n="cookie.functionalBody"></small></span><input type="checkbox" name="functional" data-functional-consent></label>
-        <div class="dialog-actions"><button class="button button-primary" value="save" data-consent="save" data-i18n="cookie.save"></button></div>
-      </form>
-    </dialog>
 
     <div class="live-region" aria-live="polite" aria-atomic="true"></div>
   </body>
