@@ -2,6 +2,7 @@
   "use strict";
 
   const DEFAULT_LANGUAGE = "he";
+  const SITE_URL = "https://didi.yoga-house.co/";
   const STORAGE = {
     language: "didi-language",
     accessibility: "didi-accessibility"
@@ -98,8 +99,16 @@
   function updateMetadata() {
     document.title = getValue("meta.title");
     setMeta("meta[name='description']", getValue("meta.description"));
+    setMeta("meta[name='author']", getValue("brand.name"));
+    setMeta("meta[property='og:site_name']", getValue("brand.name"));
+    setMeta("meta[property='og:locale']", language === "he" ? "he_IL" : "en_US");
+    setMeta("meta[property='og:locale:alternate']", language === "he" ? "en_US" : "he_IL");
     setMeta("meta[property='og:title']", getValue("meta.title"));
     setMeta("meta[property='og:description']", getValue("meta.ogDescription"));
+    setMeta("meta[property='og:image:alt']", getValue("images.heroAlt"));
+    setMeta("meta[name='twitter:title']", getValue("meta.title"));
+    setMeta("meta[name='twitter:description']", getValue("meta.ogDescription"));
+    setMeta("meta[name='twitter:image:alt']", getValue("images.heroAlt"));
   }
 
   function setMeta(selector, value) {
@@ -121,19 +130,45 @@
   }
 
   function updateStructuredData() {
+    const phone = getValue("contact.links.phone")?.replace(/^tel:/, "");
     const schema = {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
+      "@id": `${SITE_URL}#business`,
       name: getValue("brand.name"),
+      url: SITE_URL,
       description: getValue("meta.description"),
-      image: new URL("images/hero-room.jpg", window.location.href).href,
+      image: new URL("images/hero-room.jpg", SITE_URL).href,
+      logo: new URL("images/rm-logo.svg", SITE_URL).href,
+      telephone: phone,
+      email: getValue("contact.emailValue"),
       areaServed: getValue("schema.areaServed"),
       address: {
         "@type": "PostalAddress",
         addressLocality: getValue("schema.areaServed"),
+        addressRegion: getValue("schema.areaServed"),
         addressCountry: "IL"
       },
-      serviceType: getValue("schema.serviceType")
+      sameAs: [getValue("contact.links.instagram")],
+      serviceType: getValue("schema.serviceType"),
+      makesOffer: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: getValue("services.rosen.title"),
+            description: getValue("services.rosen.lead")
+          }
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: getValue("services.yoga.title"),
+            description: getValue("services.yoga.lead")
+          }
+        }
+      ]
     };
     document.querySelector("#structured-data").textContent = JSON.stringify(schema);
   }

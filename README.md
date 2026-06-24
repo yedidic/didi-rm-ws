@@ -16,7 +16,6 @@ Then open `http://localhost:8000`.
 
 - Replace the generated room images with Didi's own photographs if desired.
 - Replace the two explicitly marked testimonial placeholders with approved client quotes, or remove the section.
-- Replace the canonical URL and confirm Open Graph metadata in `index.html`.
 - Review the accessibility behavior and the short local-storage notice for the final deployment environment.
 
 All visible copy and data live in `locales/he.json` and `locales/en.json`. Keep their key structures identical.
