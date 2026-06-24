@@ -18,7 +18,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); font-size: calc(100% * var(--font-scale)); }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, "Noto Sans Hebrew", sans-serif; line-height: 1.7; }
-body[dir="ltr"] { font-family: Arial, Helvetica, sans-serif; }
+html[dir="ltr"] body { font-family: Arial, Helvetica, sans-serif; }
 body.menu-open { overflow: hidden; }
 img { display: block; width: 100%; }
 a { color: inherit; }
