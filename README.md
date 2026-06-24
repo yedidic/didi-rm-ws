@@ -15,7 +15,6 @@ Then open `http://localhost:8000`.
 ## Before publishing
 
 - Replace the generated room images with Didi's own photographs if desired.
-- Replace the placeholder phone, WhatsApp, email, Instagram values and links in both locale files.
 - Replace the two explicitly marked testimonial placeholders with approved client quotes, or remove the section.
 - Replace the canonical URL and confirm Open Graph metadata in `index.html`.
 - Review the accessibility behavior and the short local-storage notice for the final deployment environment.

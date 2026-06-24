@@ -47,7 +47,7 @@ html[dir="rtl"] .eyebrow { letter-spacing: .05em; }
 .site-header.scrolled { border-color: var(--line); box-shadow: 0 8px 32px rgba(39, 53, 45, .06); }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 2rem; }
 .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; margin-inline-end: auto; }
-.brand-mark { display: grid; place-items: center; width: 2.7rem; aspect-ratio: 1; border: 1px solid var(--ink); border-radius: 50%; font-family: "Fredoka", Arial, sans-serif; font-size: 1.35rem; }
+.brand-mark { width: 2.7rem; height: 2.7rem; object-fit: contain; flex: 0 0 auto; }
 .brand-copy { display: grid; line-height: 1.1; }
 .brand-copy strong { font-family: "Fredoka", Arial, sans-serif; font-size: 1.05rem; font-weight: 400; }
 .brand-copy small { margin-top: .3rem; color: var(--ink-soft); font-size: .68rem; }
@@ -186,7 +186,7 @@ body.highlight-links a { text-decoration: underline !important; text-decoration-
   :root { --header-height: 4.7rem; }
   .shell { width: min(100% - 1.5rem, 90rem); }
   .brand-copy small { display: none; }
-  .brand-mark { width: 2.35rem; }
+  .brand-mark { width: 2.35rem; height: 2.35rem; }
   .header-inner { gap: .6rem; }
   .hero-inner { padding-bottom: 5rem; }
   .hero-card { width: 100%; }
