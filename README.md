@@ -22,6 +22,14 @@ All visible copy and data live in `locales/he.json` and `locales/en.json`. Keep 
 
 Hebrew is served at `/` and English at `/en/`. Keep both HTML shells aligned when changing page structure or SEO metadata.
 
+After editing either locale file, render the crawlable fallback text into both HTML pages:
+
+```sh
+node scripts/render-locales.mjs
+```
+
+The browser still loads the JSON files at runtime, but search engines and visitors without JavaScript receive the complete localized copy directly in the HTML.
+
 ## Deployment
 
 Upload the repository contents to any static host (for example GitHub Pages, Netlify, Cloudflare Pages, or an ordinary web server). No build command or backend is required.
