@@ -14,7 +14,6 @@ Then open `http://localhost:8000`.
 
 ## Before publishing
 
-- Replace the portrait placeholder in the About section.
 - Replace the generated room images with Didi's own photographs if desired.
 - Replace the placeholder phone, WhatsApp, email, Instagram values and links in both locale files.
 - Replace the two explicitly marked testimonial placeholders with approved client quotes, or remove the section.

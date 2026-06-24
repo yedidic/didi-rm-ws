@@ -17,8 +17,7 @@
 
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: var(--header-height); font-size: calc(100% * var(--font-scale)); }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: Arial, "Noto Sans Hebrew", sans-serif; line-height: 1.7; }
-html[dir="ltr"] body { font-family: Arial, Helvetica, sans-serif; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: "Fredoka", Arial, sans-serif; line-height: 1.7; }
 body.menu-open { overflow: hidden; }
 img { display: block; width: 100%; }
 a { color: inherit; }
@@ -28,7 +27,7 @@ button { color: inherit; }
 ::selection { background: var(--clay); color: white; }
 
 h1, h2, h3, p { margin-top: 0; }
-h1, h2, h3 { font-family: Georgia, "Noto Serif Hebrew", serif; font-weight: 400; line-height: 1.14; text-wrap: balance; }
+h1, h2, h3 { font-family: "Fredoka", Arial, sans-serif; font-weight: 400; line-height: 1.14; text-wrap: balance; }
 h1 { font-size: clamp(3rem, 7vw, 6.8rem); letter-spacing: -0.045em; }
 h2 { font-size: clamp(2.3rem, 5vw, 4.8rem); letter-spacing: -0.035em; }
 h3 { font-size: clamp(2rem, 3.5vw, 3.4rem); }
@@ -40,7 +39,7 @@ p { max-width: 65ch; }
 .section { padding-block: clamp(5.5rem, 10vw, 10rem); }
 .eyebrow { margin-bottom: 1.2rem; color: var(--clay); font-size: .76rem; font-weight: 700; letter-spacing: .17em; text-transform: uppercase; }
 html[dir="rtl"] .eyebrow { letter-spacing: .05em; }
-.lead { font-family: Georgia, "Noto Serif Hebrew", serif; font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.55; }
+.lead { font-family: "Fredoka", Arial, sans-serif; font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.55; }
 .skip-link { position: fixed; z-index: 1000; inset-block-start: .75rem; inset-inline-start: .75rem; padding: .75rem 1rem; background: var(--ink); color: white; transform: translateY(-160%); }
 .skip-link:focus { transform: none; }
 
@@ -48,9 +47,9 @@ html[dir="rtl"] .eyebrow { letter-spacing: .05em; }
 .site-header.scrolled { border-color: var(--line); box-shadow: 0 8px 32px rgba(39, 53, 45, .06); }
 .header-inner { height: 100%; display: flex; align-items: center; gap: 2rem; }
 .brand { display: flex; align-items: center; gap: .8rem; text-decoration: none; margin-inline-end: auto; }
-.brand-mark { display: grid; place-items: center; width: 2.7rem; aspect-ratio: 1; border: 1px solid var(--ink); border-radius: 50%; font-family: Georgia, serif; font-size: 1.35rem; }
+.brand-mark { display: grid; place-items: center; width: 2.7rem; aspect-ratio: 1; border: 1px solid var(--ink); border-radius: 50%; font-family: "Fredoka", Arial, sans-serif; font-size: 1.35rem; }
 .brand-copy { display: grid; line-height: 1.1; }
-.brand-copy strong { font-family: Georgia, "Noto Serif Hebrew", serif; font-size: 1.05rem; font-weight: 400; }
+.brand-copy strong { font-family: "Fredoka", Arial, sans-serif; font-size: 1.05rem; font-weight: 400; }
 .brand-copy small { margin-top: .3rem; color: var(--ink-soft); font-size: .68rem; }
 .primary-nav { display: flex; align-items: center; gap: 1.6rem; font-size: .85rem; }
 .primary-nav > a, .nav-submenu-toggle { text-decoration: none; border: 0; background: none; padding: .5rem .15rem; cursor: pointer; }
@@ -93,8 +92,7 @@ html[dir="ltr"] .hero-scrim { background: linear-gradient(270deg, rgba(25, 40, 3
 .about { overflow: hidden; }
 .about-grid { display: grid; grid-template-columns: minmax(18rem, .8fr) 1.2fr; gap: clamp(4rem, 10vw, 10rem); align-items: center; }
 .about-visual { position: relative; }
-.portrait-placeholder { position: relative; z-index: 1; min-height: 36rem; display: grid; place-items: center; align-content: center; gap: 1rem; padding: 2rem; background: #dccbb7; border-radius: 48% 48% 2rem 2rem; color: rgba(39,53,45,.65); text-align: center; }
-.portrait-initial { font-family: Georgia, serif; font-size: 8rem; line-height: 1; color: var(--forest); }
+.about-portrait { position: relative; z-index: 1; height: 36rem; object-fit: cover; object-position: 64% center; border-radius: 48% 48% 2rem 2rem; }
 .organic-line { position: absolute; width: 15rem; height: 15rem; inset-block-end: -4rem; inset-inline-start: -4rem; border: 1px solid var(--clay); border-radius: 50% 40% 60% 30%; transform: rotate(18deg); }
 .about-copy > p:not(.eyebrow) { color: var(--ink-soft); }
 .about-copy .lead { color: var(--ink); }
@@ -123,8 +121,8 @@ html[dir="ltr"] .hero-scrim { background: linear-gradient(270deg, rgba(25, 40, 3
 .testimonials .section-heading p:last-child { color: var(--ink-soft); }
 .quote-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
 .quote-card { position: relative; margin: 0; padding: clamp(2rem, 5vw, 4rem); background: var(--paper); border-radius: var(--radius); }
-.quote-mark { color: var(--clay); font-family: Georgia, serif; font-size: 5rem; line-height: .5; }
-.quote-card blockquote { margin: 2rem 0; font-family: Georgia, "Noto Serif Hebrew", serif; font-size: clamp(1.3rem, 2vw, 1.65rem); }
+.quote-mark { color: var(--clay); font-family: "Fredoka", Arial, sans-serif; font-size: 5rem; line-height: .5; }
+.quote-card blockquote { margin: 2rem 0; font-family: "Fredoka", Arial, sans-serif; font-size: clamp(1.3rem, 2vw, 1.65rem); }
 .quote-card figcaption { color: var(--ink-soft); font-size: .85rem; }
 
 .contact { background: var(--clay); color: white; }
@@ -141,7 +139,7 @@ html[dir="ltr"] .hero-scrim { background: linear-gradient(270deg, rgba(25, 40, 3
 
 .site-footer { padding-block: 4rem 2rem; background: var(--forest); color: var(--cream); }
 .footer-main, .footer-meta { display: flex; justify-content: space-between; gap: 2rem; }
-.footer-main strong { font-family: Georgia, serif; font-size: 2rem; font-weight: 400; }
+.footer-main strong { font-family: "Fredoka", Arial, sans-serif; font-size: 2rem; font-weight: 400; }
 .footer-main p, .footer-meta { color: #bfc9bf; }
 .back-top { display: flex; gap: .6rem; align-items: center; }
 .footer-meta { margin-top: 3rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,.18); font-size: .8rem; }
@@ -197,7 +195,7 @@ body.highlight-links a { text-decoration: underline !important; text-decoration-
   html[dir="ltr"] .hero-scrim { background: linear-gradient(0deg, rgba(25,40,32,.78), rgba(25,40,32,.05) 75%); }
   .scroll-cue { display: none; }
   .button-row { align-items: stretch; flex-direction: column; }
-  .portrait-placeholder { min-height: 28rem; }
+  .about-portrait { height: 28rem; }
   .service-image, .service-image img { min-height: 22rem; }
   .footer-main, .footer-meta { flex-direction: column; }
   .a11y-trigger { inset-block-end: .75rem; inset-inline-start: .75rem; }

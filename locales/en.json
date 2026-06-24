@@ -44,7 +44,6 @@
     "lead": "I’m Didi Cohen, a Rosen Method Bodywork intern, Kundalini Yoga teacher and trainer, based in Rehavia, Jerusalem.",
     "body1": "I began studying Rosen Method in 2019 and completed the training program in 2023. My background also includes a BSW in Social Work from Bar-Ilan University and work as a software engineer—different worlds that each taught me something about listening, complexity and change.",
     "body2": "I’m married to Maayan and father to Pelly Fani. Together, we care for Beit Shel Yoga (House of Yoga), a studio and community in Jerusalem. I teach a weekly Kundalini Yoga group and offer private classes alongside individual Rosen sessions.",
-    "photoPlaceholder": "Portrait placeholder — replace before publishing",
     "credentialsAria": "Training and professional background",
     "credential1": "Rosen Method Bodywork studies, 2019–2023 · currently an intern",
     "credential2": "BSW, Bar-Ilan University",
@@ -58,7 +57,7 @@
     "rosen": {
       "title": "Rosen Method Bodywork",
       "lead": "A gentle practice that combines attentive touch and conversation to invite awareness of habitual muscle tension and breathing patterns.",
-      "body": "A session takes place on a treatment table, with the client comfortably clothed in underwear and covered as needed. Touch is responsive rather than forceful. There is no goal you have to achieve; sensations, breath, words or quiet can each be part of the meeting. Rosen Method is a complementary wellbeing practice and is not a replacement for medical or mental-health care.",
+      "body": "A session takes place on a treatment table. Touch is responsive rather than forceful. There is no goal you have to achieve; sensations, breath, words or quiet can each be part of the meeting. Rosen Method is a complementary wellbeing practice and is not a replacement for medical or mental-health care.",
       "noteTitle": "Individual sessions",
       "note": "In Rehavia, Jerusalem · By appointment · Offered as part of my supervised internship"
     },
@@ -104,6 +103,7 @@
     }
   },
   "images": {
+    "didiAlt": "Didi Cohen smiling in soft natural light",
     "heroAlt": "A warm, sunlit bodywork room with a linen-covered treatment table and Jerusalem stone",
     "rosenAlt": "A calm treatment room prepared for a Rosen Method Bodywork session",
     "yogaAlt": "A warm Jerusalem yoga studio with mats arranged for a small group"
